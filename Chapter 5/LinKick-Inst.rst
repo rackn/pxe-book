@@ -1,0 +1,6 @@
+
+
+
+
+Installing Linux with Kickstart
+===============================
