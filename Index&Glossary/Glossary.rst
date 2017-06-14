@@ -22,7 +22,9 @@ C
 
 D
 ~
-1.
+1. DHCP - Dynamic Host Configuration Protocol is a client-server protocol that enables a server to automatically assign IP addresses to a subnet.
+
+2. DRP - Digital Rebar Provision is a simple Golang executable that provides a simple yet complete API-driven DHCP/PXE/TFTP provisioning system.
 
 E
 ~
@@ -72,7 +74,7 @@ O
 
 P
 ~
-1.
+1.PXE - Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
 
 Q
 ~
@@ -90,7 +92,7 @@ S
 
 T
 ~
-1.
+1.TFTP - Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
 
 U
 ~
