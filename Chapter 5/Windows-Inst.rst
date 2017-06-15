@@ -2,5 +2,5 @@
 
 
 
-Installing Windows
-==================
+Installing On Windows
+=====================
