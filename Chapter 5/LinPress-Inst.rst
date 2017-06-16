@@ -2,6 +2,5 @@
 
 
 
-
 Installing Linux with Pressed
 =============================
