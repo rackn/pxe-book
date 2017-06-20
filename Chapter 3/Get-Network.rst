@@ -1,7 +1,7 @@
 Getting on the Network
 ======================
 
-This section covers how to get a new machine on the network. To do so, it must receive an IP address from the DHCP server. To start, there are some definitions and basic terms that need to be covered.
+This section covers how to add a new machine to the network. To do so, the machine must receive an IP address from the DHCP server. Before continuing, there are some definitions and basic terms that need to be covered.
 
 Dynamic Host Configuration Protocol (DHCP) is a client-server protocol that enables a server to automatically assign IP addresses to a subnet. DHCP is needed to provide a new machine with an IP address <for the network it is on>. One way to look at how to DHCP server and the machine communicate is with the Open Systems Interconnection (OSI) model. In the OSI model, the network has seven layers which are, from bottom to top: physical, data-link (or protocol), network, transport, session (also called port), presentation, and application. 
 
@@ -11,7 +11,7 @@ A computer's MAC, or physical, address is located in the second layer and is gua
 
 The goal of getting on the network is for the new machine to be able to communicate with other devices on the network through receiving an IP address from the DHCP server. 
 
-There's a problem: the machine has no knowledge. Meaning, it has no idea how to get on the network and communicate. 
+There's a problem: the machine has no knowledge. Meaning, it has no idea how to access the network and communicate with the other devices. 
 
 The machine's IP address, in the third layer, has two protocols that are located in the fourth layer: User Datagram Protocol (UDP) and Transmission Control Protocol (TCP). UDP is simpler while TCP is more complex. Both protocols have a port that they broadcast and receive information from. The port layer is similar to a switchboard, because the DHCP server must be listening on the port from which the machine is broadcasting in order to communicate. 
 
