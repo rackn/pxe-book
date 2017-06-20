@@ -74,7 +74,7 @@ O
 
 P
 ~
-1.PXE - Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
+1. PXE - Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
 
 Q
 ~
@@ -92,7 +92,7 @@ S
 
 T
 ~
-1.TFTP - Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
+1. TFTP - Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
 
 U
 ~
