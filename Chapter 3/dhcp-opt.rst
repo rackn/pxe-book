@@ -9,7 +9,7 @@ DHCP Options
 
 The UDP packet sent to the new machine by the DHCP server is called a DHCPack. Any DHCP options, or configuration parameters,  requested in the machine's UDP packet are included along with the IP address in the DHCPack. DHCP options are octet strings of variable lengths, where an octet is eight bits. The first four octets of the DHCP option field carry the "magic cookie" value, 99.139.83.99 to identify the message as a DHCP message and differentiate it from BOOTP messages. The rest of the DHCP Option field contains the option code, length, and data of the DHCP option. The option code refers to a specific DHCP option and is one octet. The length is the number of octets in the option (excluding those in the code and length subfields), and the option data is the data being sent. 
 
-There are seven categories of DHCP options: RFC 1497 Vendor Extensions, IP Layer Parameters per Host, IP Layer Parameters per Interface, TCP Parameters, Application and Service Parameters, and DHCP Extensions. The focus of this section is the last category, DHCP Extensions, which are the options specific to DHCP. 
+There are seven categories of DHCP options: RFC 1497 Vendor Extensions, IP Layer Parameters per Host, IP Layer Parameters per Interface, TCP Parameters, Application and Service Parameters, and DHCP Extensions. The focus of this section is the last category, DHCP Extensions. 
 
 The UDP packet sent from the new machine would include the desired DHCP options which are then fulfilled and sent back by the DHCP server in the DHCPack. 
 
