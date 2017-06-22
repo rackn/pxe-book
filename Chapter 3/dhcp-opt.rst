@@ -13,31 +13,60 @@ There are seven categories of DHCP options: RFC 1497 Vendor Extensions, IP Layer
 
 The UDP packet sent from the new machine would include the desired DHCP options which are then fulfilled and sent back by the DHCP server in the DHCPack. 
 
-
-<make a chart for all this info. 4 columns: code value, data length in octets, name, description>
-
-50 - 4 - Requested IP Address: DHCP client requests specific IP address
-51 - 4 - IP Address Lease Time: DHCP client requests specific lease duration or DHCP server offers specific lease duration. Measured in seconds
-52 - 1 - Option Overload: Indicates to recipient of message that SName and/or File fields carry options rather than normal information 
-		1 - File field is carrying option data
-		2 - SName field is carrying option data
-		3 - Both fields are carrying option data
-53 - 1 - DHCP Message Type: Indicates type of DHCP message 
-		1 - DHCPDISCOVER
-		2 - DHCPOFFER
-		3 - DHCPREQUEST
-		4 - DHCPDECLINE
-		5 - DHCPACK
-		6 - DHCPNAK
-		7 - DHCPRELEASE
-		8 - DHCPINFORM
-54 - 4 - Server Identifier: IP address of a DHCP server, which identifies DHCP server in messages it sends and in messages from a client accepting a DHCP server's lease. 
-55 - variable - Parameter Request List: DHCP client requests list of configuration parameter values from a DHCP server
-56 - variable - Message: Indicates an error or other message
-57 - 2 - Maximum DHCP Message Size: Indicates maximum size message client or server is willing to accept
-58 - 4 - Renewal (T1) Time Value: DHCP server tells client what value to use for renewal timer
-59 - 4 - Rebinding (T2 Time Value: DHCP server tells client what value to use for rebinding timer
-60 - variable -	Vendor Class Identifier: DHCP clients specifies its vendor and configuration
-61 - variable -	Client Identifier: DHCP client indicates a unique client ID different from DHCP default; used by DHCP server to index its configuration parameter database
-66 - variable - TFTP Server Name: Indicates to recipient that TFTP server name that would normally be in SName field when SName field is being used for options through option overload
-67 - variable - Bootfile Name: Indicates to recipient that bootfile name that would normally be in File field when File field is being used for options through option overload
++==========+======+============================+=================================================================================+
+|Code Value|Octets|Name                        |Description                                                                      |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 50       | 4    | Requested IP Address       | DHCP client requests specific IP address                                        |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 51       | 4    | IP Address Lease Time      | DHCP client requests or DHCP server offers a lease duration, measured in seconds|
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 52       | 1    | Option Overload            | Indicates that SName and/or File fields carry options rather than information   |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 1    | Option Overload            | File field is carrying option data                                              |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 2    | Option Overload            | SName field is carrying option data                                             |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 3    | Option Overload            | Both fields are carrying option data                                            |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 53       | 1    | DHCP Message Type          | Indicates type of DHCP message                                                  |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 1    | DHCP Message Type          | DHCPDISCOVER                                                                    |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 2    | DHCP Message Type          | DHCPOFFER                                                                       |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 3    | DHCP Message Type          | DHCPREQUEST                                                                     |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 4    | DHCP Message Type          | DHCPDECLINE                                                                     |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 5    | DHCP Message Type          | DHCPACK                                                                         |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 6    | DHCP Message Type          | DHCPNAK                                                                         |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 7    | DHCP Message Type          | DHCPRELEASE                                                                     |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| -        | 8    | DHCP Message Type          | DHCPINFORM                                                                      | 
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 54       | 4    | Server Identifier          | IP address of a DHCP server, which identifies DHCP server in messages it        |
+|          |      |                            | sends and in messages from a client accepting a DHCP server's lease.            |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 55       | Var  | Parameter Request List     | DHCP client requests list of configuration parameter values from a DHCP server  |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 56       | Var  | Message                    | Indicates an error or other message                                             |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 57       | 2    | Maximum DHCP Message Size  | Indicates maximum size message client or server is willing to accept            |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 58       | 4    | Renewal (T1) Time Value    | DHCP server tells client what value to use for renewal timer                    |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 59       | 4    | Rebinding (T2) Time Value  | DHCP server tells client what value to use for rebinding timer                  |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 60       | Var  | Vendor Class Identifier    | DHCP clients specifies its vendor and configuration                             |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 61       | Var  | Client Identifier          | DHCP client indicates a unique client ID different from DHCP default;           |
+|          |      |                            | used by DHCP server to index its configuration parameter database               |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 66       | Var  | TFTP Server Name           | Indicates to recipient that TFTP server name which would normally be in SName   |
+|          |      |                            |  field when SName field is being used for options through option overload       |
++----------+------+----------------------------+---------------------------------------------------------------------------------+
+| 67       | Var  | Bootfile Name              | Indicates to recipient that bootfile name that would normally be in File field  | 
+|					 |			|													   | when File field is being used for options through option overload               |
++==========+======+============================+=================================================================================+
