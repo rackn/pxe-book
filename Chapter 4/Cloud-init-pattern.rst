@@ -1,0 +1,6 @@
+
+
+
+
+Cloud Init Pattern
+==================
