@@ -1,3 +1,7 @@
+
+
+
+
 Getting on the Network
 ======================
 
@@ -9,7 +13,7 @@ Dynamic Host Configuration Protocol (DHCP) is a client-server protocol that enab
 
 A computer's MAC, or physical, address is located in the second layer and is guaranteed by the manufacturer to be unique. There is also a local IP address, located in the third layer, that is given by the DHCP server and is unique for the network. The network refers to the group of devices that share a connection to a server.
 
-The goal of getting on the network is for the new machine to be able to communicate with other devices on the network through receiving an IP address from the DHCP server. 
+The goal of getting on the network is for the new machine to be able to communicate with other devices on the network by receiving an IP address from the DHCP server. 
 
 There's a problem: the machine has no knowledge. Meaning, it has no idea how to access the network and communicate with the other devices. 
 
