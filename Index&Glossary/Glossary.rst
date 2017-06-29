@@ -22,9 +22,9 @@ C
 
 D
 ~
-1. DHCP - Dynamic Host Configuration Protocol is a client-server protocol that enables a server to automatically assign IP addresses to a subnet.
+1. DHCP: Dynamic Host Configuration Protocol is a client-server protocol that enables a server to automatically assign IP addresses to a subnet.
 
-2. DRP - Digital Rebar Provision is a simple Golang executable that provides a simple yet complete API-driven DHCP/PXE/TFTP provisioning system.
+2. DRP: Digital Rebar Provision is a simple Golang executable that provides a simple yet complete API-driven DHCP/PXE/TFTP provisioning system.
 
 E
 ~
@@ -40,11 +40,13 @@ G
 
 H
 ~
-1.
+1. HTTP: Hypertext Transfer Protocol is an application protocol for the exchange and transfer of hypertext. 
 
 I
 ~
 1. iPXE HTTP: An open-source version of Preboot Execution Environment that fetches boot files using the Hypertext Transfer Protocol. 
+
+2. IPMI: Intelligent Platform Management Interface is a set of computer interface specifications for out-of-band management (see OOBM).
 
 J
 ~
@@ -52,7 +54,7 @@ J
 
 K
 ~
-1.
+1. Kernel: The core of an operating system whose primary task is to mediate access to the CPU, memory, and devices. 
 
 L
 ~
@@ -70,11 +72,11 @@ N
 
 O
 ~
-1.
+1. OOBM: Out-of-band management is any system that allows for remote access to devices on a network.
 
 P
 ~
-1. PXE - Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
+1. PXE: Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
 
 Q
 ~
@@ -92,11 +94,11 @@ S
 
 T
 ~
-1. TFTP - Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
+1. TFTP: Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
 
 U
 ~
-1. UUID: 
+1. UUID: A Universally Unique Identifier is a 128-bit number assigned to a set of information. Also referred to as a Globally Unique Identifier (GUID).
 
 V
 ~
