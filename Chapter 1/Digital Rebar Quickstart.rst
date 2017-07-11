@@ -2,14 +2,14 @@
 
 
 Digital Rebar Quick Start
-========================   
+=========================  
 
 Curl/Bash is NOT safe, but it is fun and easy.
 
 Load the following into the terminal:
  
-  ||| curl -fsSL https://raw.githubusercontent.com/digitalrebar/provision/master/tools/ 
-  |||  install.sh | bash -s -- --isolated install  									    
+  	||| curl -fsSL https://raw.githubusercontent.com/digitalrebar/provision/master/tools/ 
+  	|||  install.sh | bash -s -- --isolated install  									    
 
 This will pull the latest code bundle and checksum from github, extract the code files, make sure prerequisites are installed, and create some initial directories and links. It should display something like this:
 
