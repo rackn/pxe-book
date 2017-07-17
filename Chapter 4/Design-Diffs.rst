@@ -12,17 +12,17 @@ There are quite a few design difficulties to consider when building infrastructu
 Dealing with heterogeneity. 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	There can be many differences across systems, so the infrastructure may work for one operating system but not another. This requires a design that can handle system differences without needing to create a new design for each system. Systems might have different behaviors and might want to mix and match different components.
+	There can be many differences across systems, so the infrastructure may work for one operating system but not another. This requires a design that can handle system differences without needing to create a new design for each system. Unfortunately, systems often have different behaviors and might attempt to mix and match different components.
 
 How much does the user know about what they are booting? 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	This is the issue of previous knowledge versus discovered information. In many designs, the user needs prior knowledge of what they are booting in order to make decisions and bootstrap the program, often in the form of having to pre-populate information themselves. But this requirement of prior knowledge makes bootstrapping the program much more difficult. Matching information to where it needs to go is a really big deal. The design difficulty is in setting up the program so that the user can discover the information they need as they go through the process. 
+	This is the issue of previous versus discovered information. In many designs, the user needs prior knowledge of the network they are booting in order to make decisions and bootstrap the program successfully. Often this knowledge is used to pre-populate information manually. While it is an option, this requirement of prior knowledge makes bootstrapping the program much more difficult and time-consuming. Matching information to where it needs to go is a really big deal and can be a massive time constraint. Clearly there is value in a design that allows for setting up the program so that the user can discover the information they need as they go through the process. 
 
 Deciding when and how often to run the boot process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	The standard has been to tear down infrastructure once it is done. However, a new school of thought is to keep the infrastructure running, and to have boot frequently. Relates to immutable infrastructure. In design, there needs to be a decision made of when processes should be run and the frequency with which they should run. 
+	The standard has been to tear down infrastructure once it is done. However, a new school of thought has emerged that seeks to keep the infrastructure running, and to allow boots frequently. This concept relates to immutable infrastructure, that is infrastructure that does not change but that is able to work in a repeatable fashion. When designing infrastructure, there needs to be a decision made of when processes should be run and the frequency with which they should run. 
 
 Closely controlling who has access to the system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -32,12 +32,12 @@ Closely controlling who has access to the system
 How to handle out-of-band management (OOBM)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	All servers have an additional interface: IPMI. Need to decide if OOBM should be made part of the boot provision. OOBM can be used to turn PXE on and off which can prevent broadcast storms and is useful for security reasons. However, this is what creates the OOBM challenge. A better path is to always DHCP boot, which still gives the administrator control of the system and has only a small chance of overwhelming the DHCP. 
+	All servers have an additional interface: IPMI which provides options for out of band management and monitoring. This opens another important consideration, whether OOBM should be made part of the boot provision. OOBM can be used to turn PXE on and off which can prevent broadcast storms and is useful for security reasons. However, this also creates a challenge for OOBM as it can overwhelm the DHCP server. A better path is to always DHCP boot, which still gives the administrator control of the system and has only a small chance of overwhelming the DHCP. 
 
 Figuring out IP address allocation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	Many operators often want to receive their IP address is a specific format, especially when they are receiving a large number of IP addresses which creates an additional design consideration when building up the infrastructure. For example, an operator may want the IP addresses to be sent to them organized by interface, with each interfaces' IP addresses to have the same last octet. While this is an understandable request, it is unfortunately quite difficult to implement. 
+	Many operators often want to receive their IP address is a specific format, especially when they are receiving a large number of IP addresses which creates an additional design consideration when building up the infrastructure. For example, an operator may want the IP addresses to be sent to them organized by interface, with each interfaces' IP addresses to have the same last octet. While this is an understandable request, it is unfortunately complex to implement. 
 
 Issues with rack servers
 ~~~~~~~~~~~~~~~~~~~~~~~~
