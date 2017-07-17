@@ -5,7 +5,6 @@
 Installing On OS X
 ==================
 
-<<<<<<< HEAD
 This section covers how to install Digital Rebar Provision on a Mac. 
 The bsdtar and p7zip packages are needed before installation. Additionally, Bsdtar must be at least version 3.0.0. 
 
