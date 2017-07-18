@@ -21,7 +21,7 @@ The way around the issues with PXE/TFTP is a two-stage install. The two-stage in
 It is difficult to decentralize DHCP and provisioning infrastructures because everything needs to be synchronized.
 There is a tendency to establish only one DHCP server per region, which creates a network congestion point if there is a massive re-provisioning burst and single point of failure when something goes wrong. This tendency is coupled with the desire to reboot all the servers in a data center at the same time, which is quite unrealistic.
 
-This is where the idea of maximum load, or the capacity of server that is doing the network provisioning, comes in. 
+This is where the idea of maximum load, or the capacity of the server that is doing the network provisioning, comes in. 
 
 Some people use a torrent system to get around the maximum load issue because torrent distributes bandwidth requirements across multiple servers. However, there are those who do not want to use torrent and using a torrent system still requires that a certain amount of the infrastructure be bootstrapped. In this case, the optimal solution is to either orchestrate a way to stage the bootstrapping environments or create a distributed provisioning infrastructure where you could put provisioners in the top-of-rack switch or on a smaller block on nodes to tighten the scope of the provisioning in order to avoid crossing a large amount of networking segments. This solution requires synchronization across all the information, which is additional management layers on provisioning. 
 

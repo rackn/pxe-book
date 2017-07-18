@@ -21,7 +21,7 @@ Digital Rebar provision can be backed up by consul or etcd data storage to distr
 
 High availability provisioning means that the DHCP servers are aware of multiple nextboot targets. The DHCP servers need to be able to change the nextboot to an available server. This cannot use traditional load-balancers because TFTP does not support load balancing. 
 
-If there are multiple provisioners, then all the information must be synced for them using a shared data sotre or by using a site that manages synchronization. The issue with this is boot images can be large, and having multiple provisioners might require replicating boot images where they are not needed. The alternative is to distribute the primary and have every machine point to a central back-up. 
+If there are multiple provisioners, then all the information must be synced for them using a shared data store or by using a site that manages synchronization. The issue with this is boot images can be large, and having multiple provisioners might require replicating boot images where they are not needed. The alternative is to distribute the primary and have every machine point to a central back-up. 
 
 In short: In an environment with the expectation of rebooting and provisioning more often, DHCP and provisioning will become an essential part of the high availability infrastructure. 
 
