@@ -21,7 +21,7 @@ Most big infrastructures are remotely operated. Identifying each node is difficu
 
 Another challenge in big infrastructure is having multiple teams that need to collaborate but have different access. For example, the networking team and the server team might have to coordinate activities to handle boot provisioning. 
 
-Big infrastructure people are often very concerned with time. They are willing to spend more time optimizing their systems and more likely to use a disk imaging approach. Typically much more consistent inside of infrastructure and the nodes so the system is much more homogeneous. 
+Big infrastructure managers are often very concerned with time. They are willing to spend more time optimizing their systems and more likely to use a disk imaging approach. Typically much more consistent inside of infrastructure and the nodes so the system is much more homogeneous. 
 
 <should the collective noun be 'big infrastructure people' 'big infrastructure clients' just 'big infrastructure?' I've used a mix of them in this first draft of the section>
 
