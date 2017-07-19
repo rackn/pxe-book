@@ -17,7 +17,7 @@ Dealing with heterogeneity.
 How much does the user know about what they are booting? 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	This is the issue of previous versus discovered information. In many designs, the user needs prior knowledge of the network they are booting in order to make decisions and bootstrap the program successfully. Often this knowledge is used to pre-populate information manually. While it is an option, this requirement of prior knowledge makes bootstrapping the program much more difficult and time-consuming. Matching information to where it needs to go is a really big deal and can be a massive time constraint. Clearly there is value in a design that allows for setting up the program so that the user can discover the information they need as they go through the process. 
+	This is the issue of previous versus discovered information. In many designs, the user needs prior knowledge of the network they are booting in order to make decisions and bootstrap the program successfully. Often this knowledge is used to pre-populate information manually. While it is an option, this requirement of prior knowledge makes bootstrapping the program much more difficult and time-consuming. Matching information to where it needs to go is a big deal and can be a considerable time constraint. Clearly there is value in a design that allows the discovery of required information during the process. 
 
 Deciding when and how often to run the boot process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
