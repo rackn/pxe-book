@@ -21,3 +21,4 @@ In Digital Rebar Provisioner (DRP), the control machine has two channels over wh
 <DRP Passive Discovery graphic>
 
 Then, once the DHCP system directs machines to boot the DRP image, the machine will register with DRP and then eventually inventory the nodes running on the machine. At this point, a machine is fully inventoried and discovered. Other discovery methods will work differently, but DRP is a fairly simple example. 
+
