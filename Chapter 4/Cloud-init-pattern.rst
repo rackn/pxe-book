@@ -7,11 +7,11 @@ Cloud Init
 
 Cloud-init, short for cloud initialization, is a cloud-based pattern for injecting configuration information into a newly provisioned system.
 
-Each server is assigned an initialization file with the details it needs to come online. Cloud-init can substitute for a Preseed/Kickstart configuration, but there still needs to be something to execute the cloud-init file on the server. Cloud-init does not eliminate configuration, rather it changes the tools used for configuration.
+Each server is assigned an initialization file with the details it needs to come on-line. Cloud-init can substitute for a Preseed/Kickstart configuration, but there still needs to be something to execute the cloud-init file on the server. Cloud-init does not eliminate configuration, rather it changes the tools used for configuration.
 
 There is a technology called curtin, which is an Ubuntu technology, that will read a file and do post-configuration, like Preseed/Kickstart. The challenge is still needing to create a file that is unique to each server in order to inject server-specific information. 
 
-In cloud, this pattern is much simpler because the servers are pretty much same there. To do it in hardware need more info about server to build cloud-init files so they can then drive the right configuration. lots of ppl want to use cloud-init as provisioning tool bc they're used to seeing it in cloud. 
+In cloud, this pattern is much simpler because the servers are pretty much same there. To do it in hardware requires more info about the servers to build cloud-init files so they can then drive the right configuration. Cloud-init is a very popular provisioning tool because of its use in cloud systems. 
 
 Cloud-init is very popular in immutable operating systems such as container linux (previously coreOS), or linuxkit or atomic where Preseed/Kickstart-type configurations are not supported due to the immutable OS. 
 

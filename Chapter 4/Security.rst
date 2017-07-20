@@ -18,7 +18,7 @@ Provisioning channels can be secured with UEFI (Unified Extensible Firmware Inte
 
 Make sure the DHCP servers only use white-list or never automatically accept discovered servers and never trust discovered servers without some form of verification. One option is to use a TPM. A TPM, or Trusted Platform Module, allows the user to sign an encryption key onto a server. Configuring a TPM as part of a boot process is one of the best security practices. Using a TPM requires a trusted system, as it cannot allow any node to just declare itself; the system needs a way to validate them. For more information, reference Chapter 2.4 "White-list vs Discovery."
 
-One of the problems with configuration-based provisioning is that is requires access to the server in order to change the configuration, such as with Cobbler or Stacky. In those cases, people have to give sensitive access to a server to a broad range of people.
+One of the problems with configuration-based provisioning is that it requires access to the server in order to change the configuration, such as with Cobbler or Stacky. In those cases, people have to give sensitive access to a server to a broad range of people.
 
 The API-driven configuration used by MaaS and RackN allows for easier access to a system, but that access is only only for the API endpoint rather than the full server. API-driven configuration has the benefit of there being fewer people who have root access to deep infrastructure, and being able to control who has access to the system  and what they can do. It is important to carefully monitor who has access. 
 
