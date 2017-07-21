@@ -1,38 +1,52 @@
 
+Quick Start
+~~~~~~~~~~~
+
+This quick start guide provides a basic installation and start point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.
+
+To begin, execute the following command in a shell or terminal: 
+
+  ::
+
+    curl -fsSL https://raw.githubusercontent.com/digitalrebar/provision/master/tools/install.sh | bash -s -- --isolated install
+
+The command will pull the latest code bundle and checksum from github, extract the code files,
+verify prerequisites are installed, and create some initial directories and links.
+
+The terminal should then display something like this:
+
+  ::
+
+    # Run the following commands to start up dr-provision in a local isolated way.
+    # The server will store information and serve files from the drp-data directory.
+
+    sudo ./dr-provision --static-ip=<IP of an Interface> --file-root=`pwd`/drp-data/tftpboot --data-root=drp-data/digitalrebar &
+
+    # Once dr-provision is started, this command will gather and upload the tools required to
+    # do discovery-based machine management
+
+    tools/discovery-load.sh
+
+The next step is to execute the sudo command which will run an instance of Digital Rebar Provision that uses the drp-data
+directory for object and file storage.  Additionally, *dr-provision* will attempt
+to use the IP address best suited for client interaction, however if that detection fails, the IP
+address specified in by *--static-ip* will be used.  After Digital Rebar Provision has started a prompt for a username and password will appear.  
+
+The default username & password is ``rocketskates & r0cketsk8ts``.
+
+With Digital Rebar Provision running it is now time to install the specialized Digital Rebar Provision images, 
+and the required boot environments.
+
+The *tools/discovery-load.sh* command will use the default credentials to install
+the discovery, sledgehammer, and local boot environments.  This will download the
+sledgehammer tarball and upload into Digital Rebar Provision.  It will also change the
+default and unknown boot environments to do dynamic discovery.  This script needs to be
+run after beginning *dr-provision*.
+
+When the *tools/discovery-load.sh* script finishes Digital Rebar Provision will be installed and operational.  
 
 
-Digital Rebar Quick Start
-=========================  
+.. note:: This quick start guide does NOT create a production deployment and the deployment will NOT restart on failure or reboot.
 
-Curl/Bash is NOT safe, but it is fun and easy.
-
-Load the following into the terminal:
- 
-  	||| curl -fsSL https://raw.githubusercontent.com/digitalrebar/provision/master/tools/ 
-  	|||  install.sh | bash -s -- --isolated install  									    
-
-This will pull the latest code bundle and checksum from github, extract the code files, make sure prerequisites are installed, and create some initial directories and links. It should display something like this:
-
-
-	||| # Run the following commands to start up dr-provision in a local isolated way.
-	||| # The server will store information and serve files from the drp-data directory.
-	|||
-	||| sudo ./dr-provision --static-ip=<IP of an Interface> --file-root=`pwd`/drp-data/tftpboot --data-root=drp-data/digitalrebar &
-	|||
-	||| # Once dr-provision is started, this commmand will gather and upload the tools required to
-	||| # do discovery-based machine management
-	|||
-	|||tools/discovery-load.sh
-
-The sudo command will run an instance of Digital Rebar Provision that uses the drp-data directory for object storage and file storage. Additionally, dr-provision will attempt to use the best IP address for client’s to talk to it, but if that detection fails, the IP address specified in by –static-ip will be used.
-
-The default username: password is rocketskates:r0cketsk8ts.
-
-The tools/discovery-load.sh command will use the default credentials to install the discovery, sledgehammer, and local boot environments. This will download the sledgehammer tarball <need definition for "sledgehammer tarball"> and upload it into Digital Rebar Provision. Additionally, the tools/discovery-load.sh command will change the default and unknown boot environments to do dynamic discovery. This script needs to be run after starting dr-provision.
-
-Note: 
-	This is not a production deployment and will not restart on failure or reboot.
-	Remember to check Install <page ref> for general install information.
-	Remember to check Ports <page ref> if you are having port access issues.
-
-
+.. note:: Remember to check Chapter 5 for general install information.
+.. note:: Remember to check :ref:`rs_arch_ports` in the Digital Rebar Provision documentation if there are port access issues.
