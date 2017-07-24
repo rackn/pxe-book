@@ -4,7 +4,7 @@
 Getting Started
 ===============
 
-This section guides users through the steps needed to begin Digital Rebar Provisioning, also referred to as DRP. Digital Rebar Provision is a stand-alone version of the PXE/DHCP/TFTP system used by the broader Digital Rebar project. It is a great first step for the larger project and sufficient for those just looking to replace Cobbler or another metal provisioner (MaaS, Stacki, Foreman, USB, etcetera). DRP does not have out-of-band or firmware features - those services remain under the project umbrella.
+This section guides users through the steps needed to begin Digital Rebar Provisioning, also referred to as DRP.  Digital Rebar Provision is a stand-alone version of the PXE/DHCP/TFTP system used by the broader Digital Rebar project.  It is a great first step for the larger project and sufficient for those just looking to replace Cobbler or another metal provisioner (MaaS, Stacki, Foreman, USB, etcetera).  DRP does not have out-of-band or firmware features - those services remain under the project umbrella.
 
 For Mac and Linux, the first step is to download DRP and make sure that the DHCP is isolated. From there, go to Chapter 5.1 "Installing on OS X," or Chapter 5.2 "Installing on Linux with Kickstart and Preseed."
 
