@@ -7,7 +7,8 @@ Glossary
 
 A
 ~
-1.Admin Node: System running the containers needed for Digital Rebar. Can be VM or Physical.
+1. Admin Node: The system running the containers needed for Digital Rebar. It can be Virtual Machine (VM) or Physical.
+
 2. Anneal: The method of processing un-run Node Roles on Nodes. 
 attribute injection
 
@@ -15,10 +16,15 @@ B
 ~
 1. Bare Metal Node: Any physical node managed by Digital Rebar.
 
+2. Bootstrapping: The booting of a computer from a powered-off state by loading an operating system into the memory.
+
 C
 ~
-1.Classifier: A go-based program that processes a rules file. A system can have multiple classifiers to enable system and user-based classifiers.
+1. Classifier: A go-based program that processes a rules file. A system can have multiple classifiers to enable system and user-based classifiers.
+
 2. Cloudwrap: A container that provides a cloud abstraction service which enables the Rebar API core to create, modify, and destroy nodes in various sets of clouds.
+
+3. Consul: A distributed discovery and configuration service as well as a key-value store. 
 
 D
 ~
@@ -28,7 +34,7 @@ D
 
 E
 ~
-1.
+1. etcd: A distributed key-value store that servers as a hub for cluster coordination. It uses the Raft protocol. 
 
 F
 ~
@@ -67,7 +73,8 @@ M
 
 N
 ~
-1. Node: A VM or Physical system that Digital Rebar may manage or is managing. It is represented by an object_node.
+1. Node: A connection point in a network that can create and communicate information to other nodes in the network. 
+
 2. Node Role: An instance of a role on a specific node. These are sequenced into a directed graph and annealed to completion.
 
 O
@@ -84,12 +91,16 @@ Q
 
 R 
 ~
-1. Role: An atomic piece of functionality to apply to a node. It is represented by an object_role.
+1. Raft: A consensus algorithm that creates a consensus in clusters of machines by offering a way for the clusters to elect a leader.
+
+2. Role: An atomic piece of functionality to apply to a node. It is represented by an object_role.
 
 S
 ~
 1. Simulated Annealing: A modeling strategy from computer science that seeks optimal or stable outcomes through iterative analysis.
+
 2. Sledgehammer: A RAM-only boot environment served by the provisioner for metal node discovery.
+
 3. SSH: A network protocol that allows administrators to securely operate remote computers. It stands for Secure Shell.
 
 T
@@ -98,7 +109,9 @@ T
 
 U
 ~
-1. UUID: A Universally Unique Identifier is a 128-bit number assigned to a set of information. Also referred to as a Globally Unique Identifier (GUID).
+1. Unicast: To send out a message to a single recipient. It is the opposite of broadcasting. 
+
+2. UUID: A Universally Unique Identifier is a 128-bit number assigned to a set of information. Also referred to as a Globally Unique Identifier (GUID).
 
 V
 ~
