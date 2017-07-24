@@ -5,7 +5,7 @@
 Stage Two - iPXE & HTTP
 =======================
 
-'Section 3.1, Getting on the Network,' covered networking booting with DHCP. This section concerns the second stage of the two-stage TFTP/HTTP boot. 
+Chapter 3.1, "Getting on the Network," covered networking booting with DHCP. This section concerns the second stage of the two-stage TFTP/HTTP boot. 
 
 Digital Rebar's specialized Sledgehammer and Discovery images are designed for rapid installs with optimized install cycles that improve boot speed by switching from PXE TFTP to iPXE HTTP in a two-stage process. This ensures maximum hardware compatibility without creating excess network load.
 

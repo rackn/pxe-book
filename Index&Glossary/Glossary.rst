@@ -7,11 +7,13 @@ Glossary
 
 A
 ~
+
 1. Active Discovery: A method of discovering machines on a network in which the control machine sends out a message to which new machines can respond. It is actively seeking new machines. 
 
-2. Admin Node: System running the containers needed for Digital Rebar. Can be VM or Physical.
+2. Admin Node: The system running the containers needed for Digital Rebar. It can be Virtual Machine (VM) or Physical.
 
-2. Anneal: The method of processing un-run Node Roles on Nodes. 
+3. Anneal: The method of processing un-run Node Roles on Nodes. 
+
 attribute injection
 
 B
@@ -20,11 +22,15 @@ B
 
 2. BOOTP: Bootstrap Protocol is a protocol that automatically configures a new machine on the network. 
 
+2. Bootstrapping: The booting of a computer from a powered-off state by loading an operating system into the memory.
+
 C
 ~
 1. Classifier: A go-based program that processes a rules file. A system can have multiple classifiers to enable system and user-based classifiers.
 
 2. Cloudwrap: A container that provides a cloud abstraction service which enables the Rebar API core to create, modify, and destroy nodes in various sets of clouds.
+
+3. Consul: A distributed discovery and configuration service as well as a key-value store. 
 
 D
 ~
@@ -34,7 +40,7 @@ D
 
 E
 ~
-1.
+1. etcd: A distributed key-value store that servers as a hub for cluster coordination. It uses the Raft protocol. 
 
 F
 ~
@@ -73,7 +79,9 @@ M
 
 N
 ~
-1. Node: A VM or Physical system that Digital Rebar may manage or is managing. It is represented by an object_node.
+
+1. Node: A VM or Physical system that Digital Rebar may manage or is managing. It is represented by an object_node.  Also a connection point in a network that can create and communicate information to other nodes in the network. 
+
 
 2. Node Role: An instance of a role on a specific node. These are sequenced into a directed graph and annealed to completion.
 
@@ -95,7 +103,9 @@ Q
 
 R 
 ~
-1. Role: An atomic piece of functionality to apply to a node. It is represented by an object_role.
+1. Raft: A consensus algorithm that creates a consensus in clusters of machines by offering a way for the clusters to elect a leader.
+
+2. Role: An atomic piece of functionality to apply to a node. It is represented by an object_role.
 
 S
 ~
@@ -103,7 +113,7 @@ S
 
 2. Sledgehammer: A RAM-only boot environment served by the provisioner for metal node discovery.
 
-3. SSH: Secure Shell is a network protocol that allows administrators to securely operate remote computers.
+3. SSH: A network protocol that allows administrators to securely operate remote computers. It stands for Secure Shell.
 
 T
 ~
@@ -113,7 +123,11 @@ T
 
 U
 ~
+
 1. UDP: User Datagram Protocol is a protocol used to broadcast and receive information and is located in the fourth layer of the OSI model. It can be unreliable because, unlike TCP, UDP does not have an error-checking function. However, it is the faster of the two protocols. 
+
+2. Unicast: To send out a message to a single recipient. It is the opposite of broadcasting. 
+
 
 2. UUID: A Universally Unique Identifier is a 128-bit number assigned to a set of information. Also referred to as a Globally Unique Identifier (GUID).
 
