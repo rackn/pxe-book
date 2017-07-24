@@ -13,14 +13,14 @@ Guides
 Installation Guides
 +++++++++++++++++++
 
-<Insert like to Install Guides Playlist>
+https://www.youtube.com/watch?v=h9bYBR40erM&list=PLXPBeIrpXjfj5_8Joyehwq1nnaYSPCnmw
 
 Use Guides
 ++++++++++
 
-<Insert Link to Use Guides Playlist>
+https://www.youtube.com/watch?v=cTe3D3VRZI0&list=PLXPBeIrpXjfhphb-H0W7-L9mt3fwadkLU
 
 Informative Videos
 ------------------
 
-<Insert Link to Playlist with Informative Videos>
+https://www.youtube.com/watch?v=MPkGCiakXPs&list=PLXPBeIrpXjfilUi7Qj1Sl0UhjxNRSC7nx
