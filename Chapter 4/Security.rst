@@ -23,5 +23,4 @@ One of the problems with configuration-based provisioning is that it requires ac
 
 The API-driven configuration used by MaaS and RackN allows for easier access to a system, but that access is only for the API endpoint rather than the full server. API-driven configuration has the benefit of fewer people with root access to deep infrastructure, and also it gives the system administrator the ability to control who has access to the system and what they can do. Regardless it is critically important to carefully monitor who has access. 
 
-
-==In every case, who has access to a system is the most fundamental part of the infrastructure. Through the Digital Rebar API, new SSH keys can be injected by someone to give themselves access to the systems.== <I dont know if this needs to be here or if it should be moved to another location within the page.>
+In every case, who has access to a system is the most fundamental part of the infrastructure. Through the Digital Rebar API, new SSH keys can be injected by someone to give themselves access to the systems.
