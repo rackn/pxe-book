@@ -14,7 +14,7 @@ This is...
 The Bandwidth Problem
 ~~~~~~~~~~~~~~~~~~~~~~
 
-PXE/TFTP is more bandwidth -and networking- sensitive than iPXE/HTTP. As discussed in Chapter 3.6 "Stage Two: iPXE and HTTP," TFTP is error-prone, unsecured, only able to boot from a local area network, and much slower than HTTP.
+PXE/TFTP is more bandwidth- and networking-sensitive than iPXE/HTTP. As discussed in Chapter 3.6 "Stage Two: iPXE and HTTP," TFTP is error-prone, unsecured, only able to boot from a local area network, and much slower than HTTP.
 
 The way around the issues with PXE/TFTP is a two-stage install. The two-stage install involves a minimal TFTP component, with the majority of the downloading done using an HTTP connection. This method is Digital Rebar's default discovery. Note that this type of install does require some specialization. 
 
