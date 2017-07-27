@@ -1,5 +1,45 @@
 
 
 
-Discovery Image: Install Linux Bootenv
-======================================
+Discovery Image: Install Discovery Bootenv
+==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Multiple ways: 
+
+2 classes
+
+1 prescriptivly register every address, know about machines
+
+-DRP Discovery Image: Sledgehammer
+--RAM only centos image, provides inventory info and others
+
+---Stored in S3 bucket
+---Discovery pulls a reference sledgehammer image and sets up drp to serve the image
+
+When a request comes in the DHCP server can give the machine a kernel
+-Typically DHCP default unknown machine boot environment set to no
+-system inventories itself and then uses the inventory to register itself with DRP which then appears in UI 
+
+Discovery Image not required, could create inside DRP machine entries by assigning name and IP address into the system
