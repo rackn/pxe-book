@@ -4,3 +4,47 @@
 
 UEFI vs. Traditional BIOS
 =========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In PXE Linux there are spcs for the kernel
+Elilo takes a similar set of options in a different format
+
+Have tooling to proivde those images
+
+By Default the DHCP has the bootfile that it serves to nodes in that it tells nodes how to boot
+
+If always booting UEFI, put boot.x64.efi
+
+asks for eulilo conf and not boot conf.
+
+DRP asks for the network architecture which allows a mixed system, can send the correct response to the server from the client through DRP by looking at the parameter expansion inside option fields, get option from packet and test a value
+
+
+{{if (eq (index . 77) “iPXE”) }}default.ipxe{{else if (eq (index . 93) “0")}}lpxelinux.0{{else}}bootx64.efi{{end}}
+
+This string will let DRP detect mode
+makes choices about the clients to decide their booting location
