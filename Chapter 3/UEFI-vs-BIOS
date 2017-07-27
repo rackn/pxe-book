@@ -30,8 +30,8 @@ UEFI vs. Traditional BIOS
 
 
 
-In PXE Linux there are spcs for the kernel
-Elilo takes a similar set of options in a different format
+In PXE Linux there are specifications for the kernel
+Eulilo??? takes a similar set of options in a different format
 
 Have tooling to proivde those images
 
