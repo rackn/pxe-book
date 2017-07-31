@@ -5,6 +5,7 @@
 UEFI vs. Traditional BIOS
 =========================
 
+
 Define UEFI vs legacy BIOS
 ~~
 
@@ -41,12 +42,9 @@ That how make choices for client what they should boot for.
 
 
 
-
-
-
-
 In PXE Linux there are specifications for the kernel
-Elilo??? takes a similar set of options in a different format
+
+Eulilo??? takes a similar set of options in a different format
 
 Have tooling to proivde those images
 

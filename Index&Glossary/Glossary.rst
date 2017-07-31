@@ -7,28 +7,40 @@ Glossary
 
 A
 ~
-1.Admin Node: System running the containers needed for Digital Rebar. Can be VM or Physical.
-2. Anneal: The method of processing un-run Node Roles on Nodes. 
+
+1. Active Discovery: A method of discovering machines on a network in which the control machine sends out a message to which new machines can respond. It is actively seeking new machines. 
+
+2. Admin Node: The system running the containers needed for Digital Rebar. It can be Virtual Machine (VM) or Physical.
+
+3. Anneal: The method of processing un-run Node Roles on Nodes. 
+
 attribute injection
 
 B
 ~
-1. Bare Metal Node: Any physical node managed by Digital Rebar.
+1. Bare Metal: A hard disk where the operating system is installed.
+
+2. BOOTP: Bootstrap Protocol is a protocol that automatically configures a new machine on the network. 
+
+2. Bootstrapping: The booting of a computer from a powered-off state by loading an operating system into the memory.
 
 C
 ~
-1.Classifier: A go-based program that processes a rules file. A system can have multiple classifiers to enable system and user-based classifiers.
+1. Classifier: A go-based program that processes a rules file. A system can have multiple classifiers to enable system and user-based classifiers.
+
 2. Cloudwrap: A container that provides a cloud abstraction service which enables the Rebar API core to create, modify, and destroy nodes in various sets of clouds.
+
+3. Consul: A distributed discovery and configuration service as well as a key-value store. 
 
 D
 ~
-1. DHCP - Dynamic Host Configuration Protocol is a client-server protocol that enables a server to automatically assign IP addresses to a subnet.
+1. DHCP: Dynamic Host Configuration Protocol is a client-server protocol that enables a server to automatically assign IP addresses to a subnet.
 
-2. DRP - Digital Rebar Provision is a simple Golang executable that provides a simple yet complete API-driven DHCP/PXE/TFTP provisioning system.
+2. DRP: Digital Rebar Provision is a simple Golang executable that provides a simple yet complete API-driven DHCP/PXE/TFTP provisioning system.
 
 E
 ~
-1.
+1. etcd: A distributed key-value store that servers as a hub for cluster coordination. It uses the Raft protocol. 
 
 F
 ~
@@ -40,11 +52,13 @@ G
 
 H
 ~
-1.
+1. HTTP: Hypertext Transfer Protocol is an application protocol for the exchange and transfer of hypertext. 
 
 I
 ~
 1. iPXE HTTP: An open-source version of Preboot Execution Environment that fetches boot files using the Hypertext Transfer Protocol. 
+
+2. IPMI: Intelligent Platform Management Interface is a set of computer interface specifications for out-of-band management (see OOBM).
 
 J
 ~
@@ -52,11 +66,11 @@ J
 
 K
 ~
-1.
+1. Kernel: The core of an operating system whose primary task is to mediate access to the CPU, memory, and devices. It is the first program loaded when a computer is booting. 
 
 L
 ~
-1. Late Binding: A class of 4th generation languages that do not require
+1. Late Binding: A class of fourth generation languages that do not require
 programmers to know all the details of the information they will store until the data is actually stored
 
 M
@@ -65,16 +79,23 @@ M
 
 N
 ~
-1. Node: A VM or Physical system that Digital Rebar may manage or is managing. It is represented by an object_node.
+
+1. Node: A VM or Physical system that Digital Rebar may manage or is managing. It is represented by an object_node.  Also a connection point in a network that can create and communicate information to other nodes in the network. 
+
+
 2. Node Role: An instance of a role on a specific node. These are sequenced into a directed graph and annealed to completion.
 
 O
 ~
-1.
+1. OOBM: Out-of-band management is any system that allows for remote access to devices on a network.
+
+2. OSI Model: The Open Systems Interconnection model is a network model with seven layers: physical (the base of how the network transmits information), data-link/protocol, network, transport, session/port, presentation, and application (closest to user interaction). 
 
 P
 ~
-1.PXE - Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
+1. Passive Discovery: A method of discovering new machines in which the control machine listens for new machines on the network. It is passively waiting for new machines. 
+
+2. PXE: Preboot Execution Environment is a standard client-server interface which allows administrators to remotely configure and boot unloaded computers on their network. 
 
 Q
 ~
@@ -82,29 +103,41 @@ Q
 
 R 
 ~
-1. Role: An atomic piece of functionality to apply to a node. It is represented by an object_role.
+1. Raft: A consensus algorithm that creates a consensus in clusters of machines by offering a way for the clusters to elect a leader.
+
+2. Role: An atomic piece of functionality to apply to a node. It is represented by an object_role.
 
 S
 ~
 1. Simulated Annealing: A modeling strategy from computer science that seeks optimal or stable outcomes through iterative analysis.
+
 2. Sledgehammer: A RAM-only boot environment served by the provisioner for metal node discovery.
+
 3. SSH: A network protocol that allows administrators to securely operate remote computers. It stands for Secure Shell.
 
 T
 ~
-1.TFTP - Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
+1. TCP: Transmission Control Protocol is a protocol used to broadcast and receive information and is located in the fourth layer of the OSI model. It is more complex but also more reliable than UDP (User Datagram Protocol).
+
+2. TFTP: Trivial File Transfer Protocol is a simple file transfer utility that is used without authentication or a visible directory. 
 
 U
 ~
-1. UUID: 
+
+1. UDP: User Datagram Protocol is a protocol used to broadcast and receive information and is located in the fourth layer of the OSI model. It can be unreliable because, unlike TCP, UDP does not have an error-checking function. However, it is the faster of the two protocols. 
+
+2. Unicast: To send out a message to a single recipient. It is the opposite of broadcasting. 
+
+
+2. UUID: A Universally Unique Identifier is a 128-bit number assigned to a set of information. Also referred to as a Globally Unique Identifier (GUID).
 
 V
 ~
-1.
+1. VM: A Virtual Machine is an emulation of a computing system.
 
 W
 ~
-1.
+1. White-list: As used in Chapter 2.4, it is a list of MAC addresses for all accepted machines on a network. 
 
 X
 ~
