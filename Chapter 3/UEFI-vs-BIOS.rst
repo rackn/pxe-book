@@ -2,42 +2,30 @@
 
 
 
-UEFI vs. Traditional BIOS
+UEFI vs. Legacy BIOS
 =========================
 
+Legacy BIOS is the firmware for hardware initialization during booting. The primary issue of legacy BIOS was the size constraint in. With legacy BIOS, the MBR could only handle partitions of less than two TB.
 
-Define UEFI vs legacy BIOS
-~~
+UEFI was created to solve the issue of size limits. UEFI (Unified Extensible Firmware Interface) is a specification for interface between the OS and firmware. It boots off of remote storage using network protocols that are not comprehended by legacy BIOS. It is worth noting that UEFI has become a sort of mini OS that is capable of some OS functions, but because few people have created systems for UEFI, it is not as rich as an actual OS. 
 
-UEFI= specification for interface between OS and firmware.
-BIOS= firmware for hardware initialization during booting.
+UEFI hit a stumbling block in the beginning, so instead of waiting on UEFI, other work-arounds for the BIOS size constraint were created. For example, Ubuntu can handle more than two TB by doing some partitioning tricks during installation. Now that UEFI has gotten past that block, there is a general industry move to UEFI because some systems are ending support of legacy BIOS and there are some architectures that never supported legacy BIOS to begin with. 
 
-UEFI doesn't have 2TB size constraint of BIOS
-
-Stuff
-~~
-
-The primary issue of legacy BIOS that UEFI solves is the size constraint in BIOS. Legacy BIOS cannot handle a disk size larger than two TB. UEFI boots off of remote storage using network protocols that are not comprehended by legacy BIOS. UEFI has become a mini operating system or sorts that is capable of some OS functions but because few people have create systems for UEFI it is not as rich as actual OS's. 
-Because UEFI had issues initially, other work-arounds for the BIOS size constraint were created. For example, Ubuntu can handle more than two TB by doing some partitioning tricks during installation. There is a general industry move to UEFI because some systems are ending support of legacy BIOS and there are some architectures that never supported legacy BIOS to begin with. 
 
 DRP Applications
-~~~
-Digital Rebar Provision can handle multiple different install programs, and has separate boot programs for UEFI and for legacy BIOS. UEFIO runs ELILO while legacy BIOS runs PXE. Both ELILO and PXE process a set of configuration files to tell the machine what to boot next. They appear similar, have similar end results, but function differently.  
+~~~~~~~~~~~~~~~~
 
-Linux vs elilo in terms of booting. Have tooling to provide images. 
+Digital Rebar Provision can handle multiple different install programs, and has separate boot programs for UEFI and for legacy BIOS. UEFIO runs ELILO while legacy BIOS runs PXE Linux. Both ELILO and PXE Linux process a set of configuration files to tell the machine what to boot next. They are similar in appearance and end results, but function differently.  
+
+By default, DHCP has the bootfile image that it serves to nodes to tell the nodes how to boot. When booting DRP with legacy BIOS in the DRP quick start, use lpxelinux.0. For UEFI, boot64.eli has the program that runs in UEFI and asks ELILO for configuration.
+
+DRP can be configured to return different files based on system architecture, which allows for a mixed system. DRP can then send the correct response to the DHCP server from the client through DRP by using parameter expansions inside option field. Get option from packet and test value. 
+
+		{{if (eq (index . 77) “iPXE”) }}default.ipxe{{else if (eq (index . 93) “0")}}lpxelinux.0{{else}}boot x64.efi{{end}}
+This string, when entered into the bootenv field, will allow DRP to detect the three default modes that it can handle.
 
 
 
-By default, DHCP has the bootfile image that it serves to nodes to tell the nodes how to boot. When booting DRP with legacy BIOS in the quickstart, use lpxelinux.0. For UEFI, boot64.eli has the program that runs in UEFI. ask ELILO for confirmation
-
-
-
-Need to use both. Drp client can configured to return diff files based on sys architecture. By booting chooser into bootenv file, lets user pick which boot file to use based on architecture. Param expansions inside option field. Get option from packet and test value. 
-
-Put (string) into bootenv field will allow to detect modes. Detects 3 defaults that drp can handle. 
-{{if (eq (index . 77) “iPXE”) }}default.ipxe{{else if (eq (index . 93) “0")}}lpxelinux.0{{else}}boot x64.efi{{end}}
-
-That how make choices for client what they should boot for.
 
 
 
