@@ -5,7 +5,6 @@
 Provisioning Workflow
 =====================
 
-
 Generally, provisioning workflows can be broken down into two steps: Discovery and O/S Install.  These steps begin with network discovery (DHCP) providing a “next boot” instruction to the server’s pre-execution environment (PXE).  That environment can download a very limited operating system using an equally simple file transfer protocol (TFTP).  That next operating system can then take more complex actions including using HTTP to download further files.  This chapter will go into detail about the different stages of provisioning.  
 
 With Digital Rebar the basic discovery flow uses the specialized Discovery and Sledgehammer Boot Environments.  These Boot Environments work with the default next boot to self-register machines with Digital Rebar Provision using the Machines API.
