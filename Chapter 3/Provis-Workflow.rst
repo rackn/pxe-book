@@ -11,7 +11,7 @@ With Digital Rebar the basic discovery flow uses the specialized Discovery and S
 
 The discovery flow is highly valuable when deploying to large networks as it reduces the required information and removes the need to manage data on individual machines.  Without the discovery flow, operators must maintain information on every machine in the network.  
 
-<Add Diamond Image>
+<Add Discovery Image>
 
 Once systems have been discovered using Basic Discovery, their machine boot environments can be set to an O/S installation image.  The recommended boot environments for these images includes an automatic machines API call that sets the machine to boot to local disk.  
 
