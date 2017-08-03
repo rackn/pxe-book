@@ -24,20 +24,19 @@ This is where system forwarding comes in. If all of a user's networks need the s
 HA DHCP
 ~~~~~~~
  
-All of the networks need to have a DHCP server or set of servers that can handle all of the requests. This way, if one of the servers dies there is still a path for the networks to send out data. DHCP does not understand HA because DHCP assumes there is only one entity in charge of device addresses. The work-around for this is to force-assign addresses to devices and have MAC-IP binding for each node. 
+All of the networks need to have a DHCP server or set of servers that can handle all of the requests.  This way, if one of the servers dies there is still a path for the networks to send out data. DHCP does not understand HA because DHCP assumes there is only one entity in charge of device addresses.  The work-around for this is to force-assign addresses to devices and have MAC-IP binding for each node. 
 
 Because DHCP is a protocol for responding to a broadcast message, HA DHCP raises the issue the DHCP servers racing to answer requests, unless the servers are guaranteed to give the exact same answer.  In that case, there are a few options. All the DHCP servers can be set up to use the same data, or out of the set of DHCP servers one can be elected as the leader that will answer requests.  The way to do this is with the consensus protocol, Raft.  Raft elects a leader using consul or etcd.  If DHCP servers can manage broadcast, then multiple DHCP servers can be set up. 
 
-Another option is active and passive DHCP servers. The active DHCP server provides data and answers requests while the passive server monitors it. If the active server goes down, the passive server is able to pick up its responsibilities. DRP avoids downtime during this switch by saving the DHCP information in shared storage areas (like consul) so that the passive server can load the information as soon as the active server goes down. 
+Another option is active and passive DHCP servers.  The active DHCP server provides data and answers requests while the passive server monitors it.  If the active server goes down, the passive server is able to pick up its responsibilities.  DRP avoids downtime during this switch by saving the DHCP information in shared storage areas (like consul) so that the passive server can load the information as soon as the active server goes down.  Essentially the passive server creates a safety net and allows for downtime for the main DHCP server.  Additional DHCP servers can be added in this manner but two is usually sufficient.  
 
 
 HA Requirements Beyond DHCP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-HA requires that a file server always be available. The traditional solution to this problem is to have load balancers in front of access points for HTTP endpoints so they are always available. DRP handles this  by dynamically building references to API servers so the IP address is always injected when needed. Both methods work well and can be used in tandem. 
+High Availability also requires that a file server always be available to the network.  The traditional solution to this problem is to have load balancers in front of access points for HTTP endpoints so they are always available.  DRP handles this  by dynamically building references to API servers so the IP address is always injected when needed.  Both methods work well and can be used in tandem.  
 
-
-HA provisioning means that the DHCP servers are aware of multiple nextboot targets.  The DHCP servers need to be able to change the nextboot to an available server. This cannot use traditional load-balancers because TFTP does not support load balancing.  
+HA provisioning means that the DHCP servers are aware of multiple nextboot targets.  The DHCP servers need to be able to change the nextboot to an available server.  This cannot use traditional load-balancers because TFTP does not support load balancing.  
 
 If there are multiple provisioners, then all the information must be synced for them using a shared data store or by using a site that manages synchronization.  The issue with this is boot images can be large, and having multiple provisioners might require replicating boot images where they are not needed. The alternative is to distribute the primary and have every machine point to a central back-up. 
 
