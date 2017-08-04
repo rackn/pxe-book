@@ -2,7 +2,7 @@
 Quick Start
 ~~~~~~~~~~~
 
-This quick start guide provides a basic installation and start point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.
+This quick start guide provides a basic installation and start point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.  These commands will allow an easy setup procedure, but please be aware that this is not a full install and that this quick start guide is intended to act as an educational aid and not as a true installation guide.  For a complete installation guide see chapter 5, or for more up to date information on Digital Rebar Provision, contact the Digital Rebar Team at <RACKN TEAM CONTACT INFO>.
 
 To begin, execute the following command in a shell or terminal: 
 
