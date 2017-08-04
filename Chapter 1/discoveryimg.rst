@@ -10,7 +10,4 @@ Sledgehammer is a RAM-only Centos Image that provides inventory information abou
 
 For security reasons DHCP servers have the 'default unknown machine boot environment' variable set to 'No,' as this protects the network from breaches.  With this variable setting, the DHCP server will not register new machines which send it requests, protecting it from potential security hazards.  If Sledgehammer is allowed to register every machine without supervision, it can include and register unintended machines which poses a significant security risk.  Therefore it is best to be selective about using discovery and to review every machine added.  While discovery is a powerful tool capable of reducing the man hours required to successfully set up a large data processing center it is not the end all be all and precautions must be made to avoid security mistakes. 
 
-The Sledgehammer Kernel allows the system to inventory itself and then to register itself with DRP. These registered machines then appear in the DRP UI and can then be edited or accessed remotely.  
-
-
-
+The Sledgehammer Kernel allows the system to inventory itself and then to register itself with DRP.  These registered machines then appear in the DRP UI and can then be edited or accessed remotely.  
