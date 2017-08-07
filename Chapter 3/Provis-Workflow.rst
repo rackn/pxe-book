@@ -17,6 +17,6 @@ Once systems have been discovered using Basic Discovery, their machine boot envi
 
 <Add Unknown Network Image>
 
-Finally, there is the option to skip the discovery flow and instead move directly into O/S installation.  Provisioning on a known network requires complete knowledge of the network and the machines of which it is comprised.  This method is faster because it skips discovery in favor of determining machine definitions in advance using spread sheets, stone tablets, Ouija boards or other 1990s data center inventory management techniques.  Whichever technique, provisioning a known network is considerably more intensive especially if the prerequisite data is not on hand. 
+Finally, there is the option to skip the discovery flow and instead move directly into O/S installation.  Provisioning on a known network requires complete knowledge of the network and the machines of which it is comprised.  This method is faster because it skips discovery in favor of determining machine definitions in advance using spread sheets, stone tablets, Ouija boards or other 1990s data center inventory management techniques.  This method, while potentially faster does require lots of data entry and has potential for human error.  Whichever technique, provisioning a known network is considerably more labor intensive especially if the prerequisite data is not on hand. 
 
 <Add Known Network Image>

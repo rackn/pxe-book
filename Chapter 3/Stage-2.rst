@@ -13,9 +13,9 @@ When the new machine requests an IP address from the DHCP server, the machine pr
 
 After the machine has received the UDP packet from the DHCP server, the machine then retrieves, loads, and executes iPXE (via TFTP), which in turn sends out a DHCP request.  iPXE is given the name of a file on the HTTP server which switches the processing from TFTP over to HTTP.  This switch increases the speed because HTTP is much faster than TFTP.  
 
-iPXE is the open-source version of PXE and is available at http://ipxe.org.  
+< iPXE is the open-source version of PXE and is available at http://ipxe.org. ???> 
 
-When networking booting, HTTP can also be used to load additional content.  Additionally HTTP supports encrypted transmissions for situations where network security is threatened. 
+When networking booting, HTTP can also be used to load additional content.  Furthermore, HTTP supports encrypted transmissions for situations where network security is threatened. 
 
 
 
