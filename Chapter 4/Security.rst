@@ -13,14 +13,14 @@ The way around dealing with HTTP, TFTP, and HTTPS is to use the vendor's specifi
 
 The Digital Rebar provisioning system does not include SSH keys in provisioning channels.
 
-Do not deliver any confidential or identifying information via unsecured protocols. All credential and configuration information should be routed through secured channels. Be aware that provisioning channels are not secure.
+Do not deliver any confidential or identifying information via unsecured protocols. All credentials and configuration information should be routed through secured channels. Be aware that provisioning channels are not secure.
 
-In cases where extreme security is required provisioning channels can be secured with UEFI (Unified Extensible Firmware Interface). Therefore UEFI may be a good choice for those who are especially concerned with security.
+In cases where extreme security is required, provisioning channels can be secured with UEFI (Unified Extensible Firmware Interface). Therefore UEFI may be a good choice for those who are especially concerned with security.
 
 Make sure the DHCP servers only use white-list or never automatically accept discovered servers and never trust discovered servers without some form of verification. One way to ensure discovery verification is to use a TPM. A TPM, or Trusted Platform Module, allows the user to sign an encryption key onto a server. Configuring a TPM as part of a boot process is one of the best security practices. Using a TPM requires a trusted system, as it cannot allow any node to just declare itself; the system needs a way to validate them. For more information, reference Chapter 2.4 "White-list vs Discovery."
 
 One of the problems with configuration-based provisioning is that it requires access to the server in order to change the configuration, such as with Cobbler or Stacky. In those cases, people have to give sensitive access to a server to a broad range of people.
 
-The API-driven configuration used by MaaS and RackN allows for easier access to a system, but that access is only for the API endpoint rather than the full server. API-driven configuration has the benefit of fewer people with root access to deep infrastructure, and also it gives the system administrator the ability to control who has access to the system and what they can do. Regardless it is critically important to carefully monitor who has access. 
+The API-driven configuration used by MaaS and RackN allows for easier access to a system, but that access is only for the API endpoint rather than the full server. API-driven configuration has the benefit of fewer people with root access to deep infrastructure, and it also gives the system administrator the ability to control who has access to the system and what they can do. It is critically important to carefully monitor who has access. 
 
 In every case, who has access to a system is the most fundamental part of the infrastructure. Through the Digital Rebar API, new SSH keys can be injected by someone to give themselves access to the systems.
