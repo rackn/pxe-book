@@ -12,7 +12,7 @@ Traditionally, boot provisioning is not considered a HA service. DHCP is also of
 
 Because HA infrastructure is expensive, it only makes sense to acquire it when it is truly needed, such as in the cases below. 
 
-There are some instances, especially with establishing new infrastructure, where HA is needed. Reliance on the DHCP servers and the provisioning infrastructure for updating operating systems, re-imaging infrastructure, managing booting, handling OOBM, and other API-driven services does point to a need for HA infrastructure. 
+There are some instances, especially with establishing new infrastructure, where HA is needed. Reliance on the DHCP servers and the provisioning infrastructure for updating operating systems, re-imaging infrastructure, managing booting, handling OOBM, and other API-driven services do point to a need for HA infrastructure. 
   
 Digital Rebar Provisioning can be backed up by data storage centers such as consul or etcd to distribute its HA configurations. That is not enough in itself, and so there is still a need to deal with leader election and data distribution.  
 
@@ -24,9 +24,9 @@ This is where system forwarding comes in. If all of a user's networks need the s
 HA DHCP
 ~~~~~~~
  
-All of the networks need to have a DHCP server or set of servers that can handle all of the requests.  This way, if one of the servers dies there is still a path for the networks to send out data. DHCP does not understand HA because DHCP assumes there is only one entity in charge of device addresses.  The work-around for this is to force-assign addresses to devices and have MAC-IP binding for each node. 
+All of the networks need to have a DHCP server or set of servers that can handle all of the requests.  This way, if one of the servers dies there is still a path for the networks to send out data. DHCP does not understand HA because DHCP assumes there is only one entity in charge of device addresses.  The workaround for this is to force-assign addresses to devices and have MAC-IP binding for each node. 
 
-Because DHCP is a protocol for responding to a broadcast message, HA DHCP raises the issue of the DHCP servers racing to answer requests, unless the servers are guaranteed to give the exact same answer.  In that case, there are a few options. All the DHCP servers can be set up to use the same data, or out of the set of DHCP servers one can be elected as the leader that will answer requests.  The way to do this is with the consensus protocol, Raft.  Raft elects a leader using consul or etcd.  If DHCP servers can manage broadcast, then multiple DHCP servers can be set up. 
+Because DHCP is a protocol for responding to a broadcast message, HA DHCP raises the issue of the DHCP servers racing to answer requests, unless the servers are guaranteed to give the exact same answer.  In that case, there are a few options. All the DHCP servers can be set up to use the same data, or out of the set of DHCP servers, one can be elected as the leader that will answer requests.  The way to do this is with the consensus protocol, Raft.  Raft elects a leader using consul or etcd.  If DHCP servers can manage broadcast, then multiple DHCP servers can be set up. 
 
 Another option is to use active and passive DHCP servers.  The active DHCP server provides data and answers requests while the passive server monitors it.  If the active server goes down, the passive server is able to pick up its responsibilities.  DRP avoids downtime during this switch by saving the DHCP information in shared storage areas (like consul) so that the passive server can load the information as soon as the active server goes down.  Essentially the passive server creates a safety net and allows for downtime for the main DHCP server.  Additional DHCP servers can be added in this manner but two is usually sufficient.  
 
