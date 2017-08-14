@@ -5,7 +5,7 @@
 Digital Rebar Provision Quick Start
 =============
 
-This quick start guide provides a basic installation and start point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.  These commands will allow for an easy set-up procedure, but please be aware that this is not a full install and that this quick start guide is intended to act as an educational aid, not as a true installation guide.  For a complete installation guide see chapter 5, or for more up to date information on Digital Rebar Provision, contact the Digital Rebar Team at <RACKN TEAM CONTACT INFO>.
+This quick start guide provides a basic installation and starting point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.  These commands will allow for an easy set-up procedure, but please be aware that this is not a full install and that this quick start guide is intended to act as an educational aid, not as a true installation guide.  For a complete installation guide see chapter 5, or for more up to date information on Digital Rebar Provision, contact the Digital Rebar Team at <RACKN TEAM CONTACT INFO>.
 
 To begin, execute the following command in a shell or terminal: 
 
@@ -13,7 +13,7 @@ To begin, execute the following command in a shell or terminal:
 
     curl -fsSL https://raw.githubusercontent.com/digitalrebar/provision/master/tools/install.sh | bash -s -- --isolated install
 
-The command will pull the latest code bundle and checksum from github, extract the code files, verify prerequisites are installed, and create some initial directories and links.
+The command will pull the latest code bundle and checksum from GitHub, extract the code files, verify prerequisites are installed, and create some initial directories and links.
 
 The terminal should then display something like this:
 

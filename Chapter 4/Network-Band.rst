@@ -27,5 +27,4 @@ Some people use a torrent system to get around the maximum load issue because to
 
 Fortunately, DHCP servers do not use much bandwidth; the real bandwidth hog is TFTP boot. 
 
-The two-stage installer mitigates bandwidth hogging by keeping the boot images small and light, and to create a random back-off to distribute the provisioning load. There is, however, the risk of some servers no longer trying to PXE boot after a certain number of attempts so they time-out and never end up coming online. 
-
+The two-stage installer mitigates bandwidth hogging by keeping the boot images small and light and creating a random back-off to distribute the provisioning load. There is, however, the risk of some servers no longer trying to PXE boot after a certain number of attempts so they time-out and never end up coming online. 
