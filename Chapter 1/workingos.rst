@@ -2,6 +2,7 @@
 
 
 
+
 Working OS: Install Centos Bootenv
 ==================================
 
@@ -13,4 +14,4 @@ For Centos, the boot environment will begin by installing the OS with root user 
 
 The Ubuntu Image specifically provides a pre-seed file and then a post-install file for the boot environment.  The Ubuntu OS also has default user and password set to 'rocketskates' with sudo privileges to root. 
 
-Furthermore, DRP provides increased utility by enabling the injection of SSH keys for post-install access. This is done with the root install SSH template.  The purpose of SSH is to allow users to access the server without a password for each individual login, which allows for individual machine management from a root level and is a useful tool for the system administrator. 
+Furthermore, DRP provides increased utility by enabling the injection of SSH keys for post-install access. This is done with the root install SSH template.  The purpose of SSH is to allow users to access the server without a password for each individual login, which allows for individual machine management from a root level and is a useful tool for the system administrator.  

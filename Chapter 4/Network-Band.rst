@@ -16,7 +16,7 @@ The Bandwidth Problem
 
 PXE/TFTP is more bandwidth- and networking-sensitive than iPXE/HTTP. As discussed in Chapter 3.6 "Stage Two: iPXE and HTTP," TFTP is error-prone, unsecured, only able to boot from a local area network, and much slower than HTTP.
 
-The way around the issues with PXE/TFTP is a two-stage install. The two-stage install involves a minimal TFTP component, with the majority of the downloading done using an HTTP connection. This method is Digital Rebar's default discovery. Note that this type of install does require some specialization. 
+The way around the issues with PXE/TFTP is a two-stage install. The two-stage install involves a minimal TFTP component, with the majority of the downloading done using an HTTP connection. This method is Digital Rebar's default Discovery. Note that this type of install does require some specialization. 
 
 It is difficult to decentralize DHCP and provisioning infrastructures because everything needs to be synchronized.
 There is a tendency to establish only one DHCP server per region, which creates a network congestion point if there is a massive re-provisioning burst and single point of failure when something goes wrong. This tendency is coupled with the desire to reboot all the servers in a data center at the same time, which is quite unrealistic.
@@ -27,5 +27,5 @@ Some people use a torrent system to get around the maximum load issue because to
 
 Fortunately, DHCP servers do not use much bandwidth; the real bandwidth hog is TFTP boot. 
 
-The two-stage installer mitigates bandwidth hogging by keeping the boot images small and light, and to create a random back-off to distribute the provisioning load. There is, however, the risk of some servers no longer trying to PXE boot after a certain number of attempts so they time-out and never end up coming on-line. 
+The two-stage installer mitigates bandwidth hogging by keeping the boot images small and light, and to create a random back-off to distribute the provisioning load. There is, however, the risk of some servers no longer trying to PXE boot after a certain number of attempts so they time-out and never end up coming online. 
 
