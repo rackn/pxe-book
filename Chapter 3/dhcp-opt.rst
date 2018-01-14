@@ -14,7 +14,7 @@ There are seven categories of DHCP option: RF C 1497 Vendor Extensions, IP Layer
 The following chart details the options in the last category, DHCP Extensions. 
 
 
-=================================================================================================================================+
++================================================================================================================================+
 |Code Value|Octets|Name                        |Description                                                                      |
 +----------+------+----------------------------+---------------------------------------------------------------------------------+
 | 50       | 4    | Requested IP Address       | DHCP client requests specific IP address                                        |

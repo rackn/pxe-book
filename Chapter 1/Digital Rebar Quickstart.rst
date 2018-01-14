@@ -3,7 +3,7 @@
 
 
 Digital Rebar Provision Quick Start
-=============
+===================================
 
 This quick start guide provides a basic installation and starting point for further exploration.  The guide has been designed for UNIX systems: Mac OS, Linux OS, Linux VMs and Linux Packet Servers.  The guide employs Curl and Bash commands which are not typically considered safe, but they do provide a simple and quick process for start up.  These commands will allow for an easy set-up procedure, but please be aware that this is not a full install and that this quick start guide is intended to act as an educational aid, not as a true installation guide.  For a complete installation guide see chapter 5, or for more up to date information on Digital Rebar Provision, contact the Digital Rebar Team at <RACKN TEAM CONTACT INFO>.
 
@@ -43,4 +43,5 @@ When the *tools/discovery-load.sh* script finishes Digital Rebar Provision will 
 .. note:: This quick start guide does NOT create a production deployment and the deployment will NOT restart on failure or reboot.
 
 .. note:: Remember to check Chapter 5 for general install information.
-.. note:: Remember to check :ref:`rs_arch_ports` in the Digital Rebar Provision documentation if there are port access issues.
+
+.. note:: Remember to check Digital Rebar Provision documentation for port access issues.
